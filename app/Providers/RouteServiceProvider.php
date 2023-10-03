@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 require_once 'app/Providers/FileServiceProvider.php';
-error_reporting(E_ERROR | E_PARSE);
+// error_reporting(E_ERROR | E_PARSE);
 session_start();
 
 class RouteServiceProvider extends FileServiceProvider {
@@ -33,7 +33,7 @@ class RouteServiceProvider extends FileServiceProvider {
                 $serverURI = $_SERVER['REQUEST_URI'];
         
                 // Comment out below three lines on production
-                $baseDirectory = '/mvc_oop';
+                $baseDirectory = "/" . self::getConfig('params')['basePath'];
                 $pos = strpos($serverURI, $baseDirectory);
                 $serverURI = substr($serverURI, $pos + strlen($baseDirectory));
         

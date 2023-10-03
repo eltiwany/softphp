@@ -33,4 +33,9 @@ class FileServiceProvider {
     
         return $result;
     }
+
+    public static function getConfig($fileName)
+    {
+        return require("config" . DIRECTORY_SEPARATOR . "$fileName.php");
+    }
 }
