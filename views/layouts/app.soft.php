@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <?php include 'views/inc/navbar.php' ?>
+    <?php include 'views/inc/navbar.soft.php' ?>
 
     <div class="container my-5">
         <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <?php include 'views/inc/footer.php' ?>
+    <?php include 'views/inc/footer.soft.php' ?>
 
     <!-- Link to Bootstrap JS and jQuery (required for some Bootstrap features) -->
     <script src="public/js/jquery.slim.min.js"></script>

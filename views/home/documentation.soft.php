@@ -1,5 +1,5 @@
 <?php 
-    $layoutPath = 'views/layouts/app.php';
+    $layoutPath = 'views/layouts/app.soft.php';
     if (defined($layoutPath)) {
 ?>
 
@@ -15,6 +15,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/home/documentation.php'; 
+    $contentFile = 'views/home/documentation.soft.php'; 
     include_once $layoutPath;
 ?>

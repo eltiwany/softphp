@@ -19,6 +19,8 @@ class RouteServiceProvider extends FileServiceProvider {
         FileServiceProvider::includeAll('app' . DIRECTORY_SEPARATOR . 'Controllers');
         // Load all Models
         FileServiceProvider::includeAll('app' . DIRECTORY_SEPARATOR . 'Models');
+        // Load all Providers
+        FileServiceProvider::includeAll('app' . DIRECTORY_SEPARATOR . 'Providers');
     }
 
     public static function initiateRouting()
@@ -27,7 +29,7 @@ class RouteServiceProvider extends FileServiceProvider {
 
         foreach (self::$routePaths as $indexRoutePath => $routePath) {
             require_once 'routes' . DIRECTORY_SEPARATOR . $routePath;
-            $notFoundViewPath = 'views' . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'not-found' . '.php';
+            $notFoundViewPath = 'views' . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'not-found' . '.soft.php';
     
             foreach ($routes as $indexRoute => $route) {
                 $serverURI = $_SERVER['REQUEST_URI'];
@@ -44,7 +46,7 @@ class RouteServiceProvider extends FileServiceProvider {
         
                     $instance = new $className();
                     $viewName = $instance->$methodName();
-                    $viewPath = 'views' . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $viewName) . '.php';
+                    $viewPath = 'views' . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $viewName) . '.soft.php';
         
                     if (!file_exists($viewPath))
                         $viewPath = $notFoundViewPath;

@@ -1,5 +1,5 @@
 <?php 
-    $layoutPath = 'views/layouts/app.php';
+    $layoutPath = 'views/layouts/app.soft.php';
     if (defined($layoutPath)) {
 ?>
 
@@ -24,52 +24,52 @@
         │   .gitignore
         │   .htaccess
         │   composer.json
-        │   index.php
+        │   index.soft.php
         │   LICENSE
         │   readme.md
         │
         ├───app
         │   ├───Controllers
-        │   │       Controller.php
-        │   │       HomeController.php
-        │   │       SamplesController.php
-        │   │       UsersControllers.php
+        │   │       Controller.soft.php
+        │   │       HomeController.soft.php
+        │   │       SamplesController.soft.php
+        │   │       UsersControllers.soft.php
         │   │
         │   ├───Models
-        │   │       Sample.php
-        │   │       User.php
+        │   │       Sample.soft.php
+        │   │       User.soft.php
         │   │
         │   └───Providers
-        │           FileServiceProvider.php
-        │           RouteServiceProvider.php
-        │           SessionServiceProvider.php
-        │           ViewServiceProvider.php
+        │           FileServiceProvider.soft.php
+        │           RouteServiceProvider.soft.php
+        │           SessionServiceProvider.soft.php
+        │           ViewServiceProvider.soft.php
         │
         ├───config
-        │       db.php
+        │       db.soft.php
         │
         │
         └───views
             ├───helpers
-            │       not-found.php
+            │       not-found.soft.php
             │
             ├───home
-            │       documentation.php
-            │       landing-page.php
-            │       learn-more.php
+            │       documentation.soft.php
+            │       landing-page.soft.php
+            │       learn-more.soft.php
             │
             ├───inc
-            │       footer.php
-            │       navbar.php
+            │       footer.soft.php
+            │       navbar.soft.php
             │
             ├───layouts
-            │       app.php
+            │       app.soft.php
             │
             ├───sample
-            │       view-sample.php
+            │       view-sample.soft.php
             │
             └───users
-                    view-users.php
+                    view-users.soft.php
        </pre>
     </div>
 </div>
@@ -79,6 +79,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/home/learn-more.php'; 
+    $contentFile = 'views/home/learn-more.soft.php'; 
     include_once $layoutPath;
 ?>

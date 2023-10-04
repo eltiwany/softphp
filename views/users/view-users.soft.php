@@ -1,10 +1,9 @@
 <?php
-    require_once 'app/Providers/SessionServiceProvider.php';
     use App\Providers\SessionServiceProvider;
 
     $users = SessionServiceProvider::getViewData()['users'];
 
-    $layoutPath = 'views/layouts/app.php';
+    $layoutPath = 'views/layouts/app.soft.php';
     if (defined($layoutPath)) {
 ?>
 
@@ -34,6 +33,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/users/view-users.php'; 
+    $contentFile = 'views/users/view-users.soft.php'; 
     include_once $layoutPath;
 ?>
