@@ -24,6 +24,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/home/landing-page.soft.php'; 
+    $contentFile = __FILE__; 
     include_once $layoutPath;
 ?>

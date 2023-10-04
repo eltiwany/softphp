@@ -33,6 +33,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/users/view-users.soft.php'; 
+    $contentFile = __FILE__; 
     include_once $layoutPath;
 ?>

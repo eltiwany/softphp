@@ -24,30 +24,57 @@
         │   .gitignore
         │   .htaccess
         │   composer.json
-        │   index.soft.php
+        │   index.php
         │   LICENSE
         │   readme.md
-        │
+        │   
         ├───app
         │   ├───Controllers
-        │   │       Controller.soft.php
-        │   │       HomeController.soft.php
-        │   │       SamplesController.soft.php
-        │   │       UsersControllers.soft.php
-        │   │
+        │   │       Controller.php
+        │   │       HomeController.php
+        │   │       SamplesController.php
+        │   │       UsersControllers.php
+        │   │       
         │   ├───Models
-        │   │       Sample.soft.php
-        │   │       User.soft.php
-        │   │
+        │   │       Sample.php
+        │   │       User.php
+        │   │       
         │   └───Providers
-        │           FileServiceProvider.soft.php
-        │           RouteServiceProvider.soft.php
-        │           SessionServiceProvider.soft.php
-        │           ViewServiceProvider.soft.php
+        │           FileServiceProvider.php
+        │           RouteServiceProvider.php
+        │           SessionServiceProvider.php
+        │           ViewServiceProvider.php
         │
         ├───config
-        │       db.soft.php
+        │       db.php
+        │       params.php
+        │       
+        ├───public
+        │   │   sample-data.php
+        │   │   
+        │   ├───css
+        │   │       bootstrap.min.css
+        │   │       
+        │   └───js
+        │           bootstrap.min.js
+        │           jquery.slim.min.js
+        │           popper.min.js
         │
+        ├───routes
+        │       api.php
+        │       web.php
+        │       
+        ├───vendor
+        │   │   autoload.php
+        │   │   
+        │   └───composer
+        │           autoload_classmap.php
+        │           autoload_namespaces.php
+        │           autoload_psr4.php
+        │           autoload_real.php
+        │           autoload_static.php
+        │           ClassLoader.php
+        │           LICENSE
         │
         └───views
             ├───helpers
@@ -79,6 +106,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/home/learn-more.soft.php'; 
+    $contentFile = __FILE__; 
     include_once $layoutPath;
 ?>

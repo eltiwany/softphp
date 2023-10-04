@@ -26,6 +26,8 @@ class RouteServiceProvider extends FileServiceProvider {
     public static function initiateRouting()
     {
         self::fileLoader();
+        SoftServiceProvider::renderAll();
+
 
         foreach (self::$routePaths as $indexRoutePath => $routePath) {
             require_once 'routes' . DIRECTORY_SEPARATOR . $routePath;

@@ -15,6 +15,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/home/documentation.soft.php'; 
+    $contentFile = __FILE__; 
     include_once $layoutPath;
 ?>

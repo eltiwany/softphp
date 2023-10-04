@@ -35,6 +35,6 @@
         define($layoutPath, true); 
     }
 
-    $contentFile = 'views/sample/view-sample.soft.php'; 
+    $contentFile = __FILE__; 
     include_once $layoutPath;
 ?>
